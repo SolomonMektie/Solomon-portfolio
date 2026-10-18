@@ -1,0 +1,10 @@
+{
+  "name": "solomon-hilemariam-portfolio",
+  "description": "Full-Stack Developer | AI Engineer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve .",
+    "dev": "npx --yes serve ."
+  }
+}

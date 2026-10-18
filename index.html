@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solomon M. Hailemariam | Full-Stack Developer &amp; AI Engineer</title>
+  <meta name="description" content="Solomon M. Hailemariam - Full-Stack Developer and AI Engineer building AI-powered web apps with React 19, Node.js, Express, MySQL, Google Gemini API, RAG and semantic search.">
+  <meta name="theme-color" content="#0F172A">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Solomon M. Hailemariam | Full-Stack Developer &amp; AI Engineer">
+  <meta property="og:description" content="AI-powered web apps that turn raw data into useful answers. React 19, Node.js, MySQL, Google Gemini API, RAG and semantic search.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script defer src="js/config.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <!-- Personal text and images are injected at runtime from js/config.js, so headings start empty. -->
+  <!-- [html-validate-disable empty-heading, unique-landmark] -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-github" viewBox="0 0 16 16">
+      <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+    </symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+    </symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4 10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+    </symbol>
+  </svg>
+
+  <!-- Mobile top bar -->
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand__mark" data-field="profile.initials"></span>
+      <span class="sr-only">Home</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span class="menu-toggle__bar" aria-hidden="true"></span>
+      <span class="menu-toggle__bar" aria-hidden="true"></span>
+      <span class="menu-toggle__bar" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <!-- Mobile slide-in menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav aria-label="Mobile">
+      <ul class="mobile-menu__links">
+        <li><a href="#home" data-nav="home">Home</a></li>
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#skills" data-nav="skills">Skills</a></li>
+        <li><a href="#projects" data-nav="projects">Projects</a></li>
+        <li><a href="#experience" data-nav="experience">Experience</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__foot">
+      <a class="icon-link" id="menuGithub">
+        <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+        <span>GitHub</span>
+        <span class="sr-only"> (opens in a new tab)</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Desktop sidebar -->
+  <aside class="rail">
+    <a class="brand brand--rail" href="#home">
+      <span class="brand__mark" data-field="profile.initials"></span>
+      <span class="brand__name" data-field="profile.name"></span>
+      <span class="sr-only">Home</span>
+    </a>
+
+    <nav class="rail__nav" aria-label="Primary">
+      <ul class="rail__links">
+        <li><a class="rail__link is-active" href="#home" data-nav="home" aria-current="true">Home</a></li>
+        <li><a class="rail__link" href="#about" data-nav="about">About</a></li>
+        <li><a class="rail__link" href="#skills" data-nav="skills">Skills</a></li>
+        <li><a class="rail__link" href="#projects" data-nav="projects">Projects</a></li>
+        <li><a class="rail__link" href="#experience" data-nav="experience">Experience</a></li>
+        <li><a class="rail__link" href="#contact" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="rail__foot">
+      <a class="icon-link" id="railGithub">
+        <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+        <span class="sr-only">GitHub profile (opens in a new tab)</span>
+      </a>
+    </div>
+  </aside>
+
+  <div class="content">
+    <main id="main">
+
+      <!-- ============================ HOME / HERO -->
+      <section class="hero" id="home" aria-labelledby="heroName">
+        <div class="hero__bg" aria-hidden="true"></div>
+
+        <div class="container hero__grid">
+          <div class="hero__head" data-reveal>
+            <p class="hero__role" data-field="profile.title"></p>
+            <h1 class="hero__name" id="heroName" data-field="profile.name"></h1>
+          </div>
+
+          <div class="hero__media" data-reveal>
+            <span class="hero__glow" aria-hidden="true"></span>
+            <figure class="portrait">
+              <span class="portrait__outline" aria-hidden="true"></span>
+              <span class="portrait__corner" aria-hidden="true"></span>
+            </figure>
+            <ul class="hero__chips" id="heroChips"></ul>
+          </div>
+
+          <div class="hero__body" data-reveal>
+            <p class="hero__tagline" data-field="profile.tagline"></p>
+            <p class="hero__desc" data-field="profile.heroDescription"></p>
+            <div class="hero__actions" id="heroActions"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ ABOUT -->
+      <section class="section" id="about" aria-labelledby="aboutTitle">
+        <div class="container">
+          <p class="eyebrow">About</p>
+          <h2 class="section__title" id="aboutTitle">Where full-stack meets applied AI</h2>
+
+          <div class="about">
+            <div class="about__bio" data-reveal>
+              <p data-field="about.text"></p>
+            </div>
+            <div class="about__focus" data-reveal>
+              <h3 class="about__focus-title">Technical focus areas</h3>
+              <ol class="focus-list" id="focusList"></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================ SKILLS -->
+      <section class="section section--alt" id="skills" aria-labelledby="skillsTitle">
+        <div class="container">
+          <p class="eyebrow">Skills</p>
+          <h2 class="section__title" id="skillsTitle">Tools I work with</h2>
+          <div class="tabs" id="skillsTabs" data-reveal></div>
+        </div>
+      </section>
+
+      <!-- ============================ PROJECTS -->
+      <section class="section" id="projects" aria-labelledby="projectsTitle">
+        <div class="container">
+          <p class="eyebrow">Projects</p>
+          <h2 class="section__title" id="projectsTitle">Selected case studies</h2>
+          <div class="cases" id="projectList"></div>
+        </div>
+      </section>
+
+      <!-- ============================ HOW I BUILD -->
+      <section class="section section--alt" id="how-i-build" aria-labelledby="buildTitle">
+        <div class="container">
+          <p class="eyebrow">Process</p>
+          <h2 class="section__title" id="buildTitle">How I build</h2>
+          <ol class="steps" id="buildSteps" data-reveal></ol>
+        </div>
+      </section>
+
+      <!-- ============================ EXPERIENCE AND TRAINING -->
+      <section class="section" id="experience" aria-labelledby="expTitle">
+        <div class="container container--narrow">
+          <p class="eyebrow">Experience</p>
+          <h2 class="section__title" id="expTitle">Experience and training</h2>
+          <ol class="timeline" id="experienceList"></ol>
+        </div>
+      </section>
+
+      <!-- ============================ CONTACT -->
+      <section class="section section--contact" id="contact" aria-labelledby="contactTitle">
+        <div class="container">
+          <div class="contact-banner" data-reveal>
+            <div class="contact-banner__text">
+              <h2 class="contact-banner__title" id="contactTitle" data-field="contact.heading"></h2>
+              <p class="contact-banner__invite" data-field="contact.invitation"></p>
+              <ul class="contact-facts" id="contactFacts"></ul>
+            </div>
+            <div class="contact-banner__actions" id="contactActions"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>&copy; <span id="year"></span> <span data-field="profile.name"></span>. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <noscript>
+    <p class="noscript">This portfolio loads its content from js/config.js, so JavaScript needs to be enabled.</p>
+  </noscript>
+</body>
+</html>
